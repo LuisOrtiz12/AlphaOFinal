@@ -102,7 +102,7 @@ public function store(Request $request)
     }
 ```
 ## Creacion de Reservas
-###Esta funcion nos ayudara a crear una reservacion de un usuario donde Auth nos ayuda con los accesos de la persoan que esta en autenticacion. Se utiliza el modelo de Reservas para obtener toda la informacion que contiene ese usuario en la reservaciones que ha realizado. Utilizaremos un foreach para recorrer toda la informacion de sus reservas y si el evento que va a reservar es igual al que ya tiene. Pues ya sabemos lo negara porque ya tiene esa reservacion hecha. tambien podmeos ver una condicional si los cupos estan agotados. Si todo marcha bien pues vamos a crear una nueva Reserva donde al momento de realizarlos los cupos seran disminuido y la relacion de esa reservacion con el usuario sera registrado en la base de datos.
+### Esta funcion nos ayudara a crear una reservacion de un usuario donde Auth nos ayuda con los accesos de la persoan que esta en autenticacion. Se utiliza el modelo de Reservas para obtener toda la informacion que contiene ese usuario en la reservaciones que ha realizado. Utilizaremos un foreach para recorrer toda la informacion de sus reservas y si el evento que va a reservar es igual al que ya tiene. Pues ya sabemos lo negara porque ya tiene esa reservacion hecha. tambien podmeos ver una condicional si los cupos estan agotados. Si todo marcha bien pues vamos a crear una nueva Reserva donde al momento de realizarlos los cupos seran disminuido y la relacion de esa reservacion con el usuario sera registrado en la base de datos.
 ```
  public function store(Request $request, Evento $evento)
     {
@@ -133,8 +133,7 @@ public function store(Request $request)
     }
 ```
 ## Creacion de Gestion de Usuarios Clientes
-### Esta funcion destroy es muy especial porque nos ayudara a cambiar el estado del usuario para poder inhabilitar o habilitarlo. Ademas nos ayuda tambien a enviar una notificacion por la cual razon fue habilitado deshabilitado.
-### Si nos acordamos la funcion login tiene una condicional acerca de su estado donde si es cambiado mandara un mensaje de "Credenciales no identificadas" es porque deshabilitamos al usuario del sistema. Como si no existiera". Igualmente se usa un Gate porque esta funcion solo es para administradores. Asi que ya sabemos como dehabilitar o habilitar. 
+### Esta funcion destroy es muy especial porque nos ayudara a cambiar el estado del usuario para poder inhabilitar o habilitarlo. Ademas nos ayuda tambien a enviar una notificacion por la cual razon fue habilitado deshabilitado. Si nos acordamos la funcion login tiene una condicional acerca de su estado donde si es cambiado mandara un mensaje de "Credenciales no identificadas" es porque deshabilitamos al usuario del sistema. Como si no existiera". Igualmente se usa un Gate porque esta funcion solo es para administradores. Asi que ya sabemos como dehabilitar o habilitar. 
 ```
  public function destroy(User $user ,Request $request)
     {
@@ -179,8 +178,9 @@ public function store(Request $request)
         echo $response->message();
     }
     }
-    ```
+```
 ## Funcion de enviar notificacion de Habilitacion o Deshabilitacion
+
 ### Estas dos fucniones Desactivateuser y ActivateUser ayudara a enviar unanotiicacion al ususario que vamos a habilitar o deshabilitar su cuenta. Tener en cuneta que se debe usar funciones de email de Laravel para poder crear un texto que llegara como correo a nuestro usuario. ClientUso es una funcion donde pasamos nuestras variables y la observacion sera el justificativo de la accion. Ahora ya sabes como enviar la notificacion de Habilitar y Deshabilitar.
  ```
  private function DesactivateUser(User $user,string $observacion, string $email_admin, int $number_admin)
@@ -208,5 +208,6 @@ public function store(Request $request)
              )
          );
      }
+     
  ```
-# Estos son los puntos masimportantes que se puede visualizar en esta API. Ya tienes una idea sobre estas funciones.  pero para poder ver su funcionalidad puesdes descargarlo correrlo y puedes explorar con toda la confianza este desarrollo de codigo. Si algo no lo entendistes, no te desanimes asi todos comenzamos para poder lograr nuestro objetivos.
+## Estos son los puntos masimportantes que se puede visualizar en esta API. Ya tienes una idea sobre estas funciones.  pero para poder ver su funcionalidad puesdes descargarlo correrlo y puedes explorar con toda la confianza este desarrollo de codigo. Si algo no lo entendistes, no te desanimes asi todos comenzamos para poder lograr nuestro objetivos.
