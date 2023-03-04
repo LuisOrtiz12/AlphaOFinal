@@ -210,4 +210,14 @@ public function store(Request $request)
      }
      
  ```
-## Estos son los puntos masimportantes que se puede visualizar en esta API. Ya tienes una idea sobre estas funciones.  pero para poder ver su funcionalidad puesdes descargarlo correrlo y puedes explorar con toda la confianza este desarrollo de codigo. Si algo no lo entendistes, no te desanimes asi todos comenzamos para poder lograr nuestro objetivos.
+## Estos son los puntos mas importantes que se puede visualizar en esta API. Ya tienes una idea sobre estas funciones.  pero para poder ver su funcionalidad puesdes descargarlo correrlo y puedes explorar con toda la confianza este desarrollo de codigo. Si algo no lo entendistes, no te desanimes asi todos comenzamos para poder lograr nuestro objetivos. PAra que te guste mas mi repositorio te muestro esto.
+### Para correr mi proyecto solo pon estos comandos y listo ya puedes jugar con mi API o poner mas cosas de tu imaginacion
+```
+composer install
+php artisan serve -> Te ayudara a visualizar en un desarrolllo local
+php artisan migrate --seed -> para migrar datos quemados para jugar con mi codigo
+
+```
+## Ten en cuenta esto amigos. Ten instalado XAMP con PHP 8.0.25 porque trabajo con esta version y debes crear una base de datos en MYSQL donde debe sintroducir eso en el archivo .env.
+## Ademas cunado lo corras te mandara un error. No tengas miedo solo requeria que le agregues una KEY que se te asignara automaticamente en la web.
+## Eso es todo chicos y chicas. Usen con sabiduria mi proyecto hecho con mucho cariño
