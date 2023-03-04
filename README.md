@@ -218,6 +218,6 @@ php artisan serve -> Te ayudara a visualizar en un desarrolllo local
 php artisan migrate --seed -> para migrar datos quemados para jugar con mi codigo
 
 ```
-## Ten en cuenta esto amigos. Ten instalado XAMP con PHP 8.0.25 porque trabajo con esta version y debes crear una base de datos en MYSQL donde debe sintroducir eso en el archivo .env.
-## Ademas cunado lo corras te mandara un error. No tengas miedo solo requeria que le agregues una KEY que se te asignara automaticamente en la web.
+## Ten en cuenta esto amigos. Ten instalado XAMP con PHP 8.0.25 porque trabajo con esta version y debes crear una base de datos en MYSQL donde debes introducir eso en el archivo .env.
+## Ademas cuando lo corras te mandara un error. No tengas miedo solo requerira que le agregues una KEY que se te asignara automaticamente en la web.
 ## Eso es todo chicos y chicas. Usen con sabiduria mi proyecto hecho con mucho cariño
