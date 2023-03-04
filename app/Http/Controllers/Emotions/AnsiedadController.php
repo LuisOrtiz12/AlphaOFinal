@@ -58,7 +58,7 @@ class AnsiedadController extends Controller
         ]);
 
         $ansiedad= $request ->validate([
-            'video' => ['file'],
+            'video' => ['required','file','mimes:mp4','max:200000'],
         ]);
         $file = $ansiedad['video'];
         $uploadedFileUrl = Cloudinary::uploadVideo($file->getRealPath(),['folder'=>'emotions']);
